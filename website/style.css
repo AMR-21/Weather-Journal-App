@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d7d7d7;
+  height: 100vh;
+  padding: 3.2rem;
+  color: #333;
+  font-family: BlinkMacSystemFont, sans-serif;
+}
+
+.app {
+  overflow: hidden;
+  /* display: grid; */
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  height: 90vh;
+  width: 130rem;
+  border-radius: 50px;
+}
+
+.container {
+  padding: 3.2rem;
+}
+
+/* ************************ */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 80%;
+  align-self: center;
+  color: #000;
+  margin-bottom: 3.2rem;
+}
+
+.temp-main {
+  display: flex;
+  align-self: center;
+  position: relative;
+}
+
+.temp-main-value {
+  font-size: 13rem;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+
+.unit {
+  position: absolute;
+  top: -0.4rem;
+  right: -3rem;
+  margin-top: 3.2rem;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: rgba(33, 89, 127, 0.5);
+}
+
+.temp-main-date {
+  align-self: center;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  margin-bottom: 4.8rem;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-top: 1px solid rgba(33, 89, 127, 0.5);
+  padding: 3.2rem 1.6rem;
+}
+
+.status,
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.weather-icon {
+  color: #21597f;
+  font-size: 2rem;
+  margin-right: 1.2rem;
+}
+
+/* ************************ */
+
+.request {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(33, 89, 127, 0.5);
+  padding: 3.2rem 1.6rem;
+}
+
+.request label {
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  margin-left: 0.4rem;
+}
+
+.input {
+  margin-bottom: 2rem;
+  border: none;
+  background-color: #f7f7f7;
+  padding: 0.8rem 1.2rem;
+  border-radius: 11px;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(33, 89, 127, 0.5);
+}
+
+.input::placeholder {
+  color: rgba(51, 51, 51, 0.4);
+}
+
+.btn-get {
+  border: none;
+  background: #21597f;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-get:hover,
+.btn-get:focus {
+  background: #fecd67;
+}
+
+/* ************************ */
+
+.main {
+  width: 100%;
+  background: #f7f7f7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 20rem 1fr 1fr;
+}
+
+.recents {
+  grid-column: 1 / 4;
+  overflow: scroll;
+  margin-bottom: 2.4rem;
+}
+
+.recent-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.entry {
+  display: flex;
+  gap: 3.2rem;
+  font-size: 1.6rem;
+  padding: 1.2rem 0.4rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.field {
+  font-weight: 500;
+}
+
+.quote {
+  font-style: italic;
+}
+
+/* ************************ */
+
+.info {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2.4rem;
+  width: 90%;
+  height: 85%;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 3%);
+  transition: all 0.3s;
+}
+
+.info:hover {
+  transform: scale(1.1);
+}
+
+.info-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  background: #21597f;
+  padding: 0.8rem;
+  border-radius: 11px;
+}
+
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 1px;
+  align-self: center;
+}
+
+.max-data,
+.min-data {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-right: 1.2rem;
+}
+
+.info-temp {
+  position: relative;
+  font-size: 6rem;
+}
+
+.info-unit,
+.info-unit-km,
+.info-unit-speed {
+  position: absolute;
+  top: 1rem;
+  right: -2.25rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(33, 89, 127, 0.5);
+}
+
+.info-unit-km {
+  top: auto;
+  bottom: 0.75rem;
+  right: -3rem;
+}
+
+.info-unit-speed {
+  top: auto;
+  bottom: 0.75rem;
+  right: -4.65rem;
+}
+
+.rise-data,
+.set-data {
+  font-size: 3rem;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.mid {
+  justify-self: center;
+}
+.end {
+  justify-self: end;
+}
