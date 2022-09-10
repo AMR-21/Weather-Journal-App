@@ -2,4 +2,4 @@
  
 Run server.js from node.js terminal and enjoy!
 
-**Do not forget to install dependencies from npm
+**Do not forget to install dependencies from npm (express, body-parser, cors)
