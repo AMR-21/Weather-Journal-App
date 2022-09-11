@@ -1,5 +1,4 @@
 # Weather-Journal-App
  
-Run server.js from node.js terminal and enjoy!
+Run server.js from node.js terminal and enjoy at localhost:8000 !
 
-**Do not forget to install dependencies from npm (express, body-parser, cors)
