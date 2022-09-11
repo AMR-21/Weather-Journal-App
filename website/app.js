@@ -5,7 +5,6 @@ const apiKey = "&appid=c33b2980f1ea7266f0fa9da172076f5a&units=imperial";
 const baseUrl = "https://api.openweathermap.org/data/2.5/weather?zip=";
 
 // //////////////////////////////////////////////////////////
-//
 // Elements
 const recentsHolder = document.querySelector(".recents-holder");
 
@@ -86,7 +85,6 @@ const getData = async (url = "/all") => {
   const res = await fetch(url);
   try {
     const data = await res.json();
-    console.log(data);
     return data;
   } catch (e) {
     console.log("Error:", e.message);
