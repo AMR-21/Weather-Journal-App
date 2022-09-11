@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700|Ranga:400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,21 +21,21 @@
         <img class="logo" src="logo.png" alt="Sun behind cloud" />
 
         <div class="temp-main">
-          <p class="temp-main-value">113</p>
+          <p class="temp-main-value"></p>
           <span class="unit">°F</span>
         </div>
 
-        <p class="temp-main-date">Monday, 12/8/2020</p>
+        <p class="temp-main-date"></p>
 
         <div class="weather">
           <div class="status">
             <i class="weather-icon ph-cloud"></i>
-            <p class="status-text">Most Cloudy</p>
+            <p class="status-text"></p>
           </div>
 
           <div class="location">
             <i class="weather-icon ph-map-pin"></i>
-            <p class="city">New York</p>
+            <p class="city"></p>
           </div>
         </div>
 
@@ -44,7 +46,6 @@
             class="input"
             id="zip"
             placeholder="{zipcode},{country}"
-            required
           />
 
           <label for="feelings">Your feelings</label>
@@ -54,7 +55,6 @@
             placeholder="Enter your feelings here"
             rows="1"
             cols="25"
-            required
           ></textarea>
 
           <button class="btn-get" type="submit">Get INFO</button>
@@ -62,19 +62,6 @@
       </div>
 
       <div class="main container">
-        <div class="recents">
-          <h2 class="recent-title">Recent Entries</h2>
-          <div class="entry">
-            <div id="date"><span class="field">Date</span>: 22</div>
-            <div id="temp"><span class="field">Temperature</span>: 22</div>
-            <div id="feel"><span class="field">Feels Like</span>: 22</div>
-            <div id="content">
-              <span class="field">Feeling</span>:
-              <span class="quote">"asafasf"</span>
-            </div>
-          </div>
-        </div>
-
         <div class="info max-min">
           <div class="info-head">
             <i class="info-icon ph-arrows-down-up"></i>
@@ -83,12 +70,12 @@
 
           <div class="max-data">
             <i class="icon ph-arrow-up"></i>
-            <span class="info-temp">12<span class="info-unit">°F</span></span>
+            <span class="info-temp max"></span>
           </div>
 
           <div class="min-data">
             <i class="icon ph-arrow-down"></i>
-            <span class="info-temp">24<span class="info-unit">°F</span></span>
+            <span class="info-temp min"></span>
           </div>
         </div>
 
@@ -97,9 +84,7 @@
             <i class="info-icon ph-thermometer"></i>
             <p class="info-title">Feels like</p>
           </div>
-          <p class="feels-data">
-            <span class="info-temp">12<span class="info-unit">°F</span></span>
-          </p>
+          <p class="feels-data"></p>
         </div>
 
         <div class="info rise-set end">
@@ -124,9 +109,7 @@
             <i class="info-icon ph-drop"></i>
             <p class="info-title">Humidity</p>
           </div>
-          <p class="humidity-data">
-            <span class="info-temp">12<span class="info-unit">%</span></span>
-          </p>
+          <p class="humidity-data"></p>
         </div>
 
         <div class="info visibility mid">
@@ -134,61 +117,24 @@
             <i class="info-icon ph-eye"></i>
             <p class="info-title">Visibility</p>
           </div>
-          <p class="humidity-data">
-            <span class="info-temp"
-              >12<span class="info-unit-km">km</span></span
-            >
-          </p>
+          <p class="visibility-data"></p>
         </div>
 
-        <div class="wind info end">
+        <div class="info wind end">
           <div class="info-head">
             <i class="info-icon ph-wind"></i>
             <p class="info-title">Wind Speed</p>
           </div>
-          <p class="wind-data">
-            <span class="info-temp"
-              >12<span class="info-unit-speed">km/h</span></span
-            >
-          </p>
+          <p class="wind-data"></p>
+        </div>
+
+        <div class="recents">
+          <h2 class="recent-title">Recent Entries</h2>
+          <div class="recents-holder"></div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="recent">
-      <p class="title">Most Recent Entry</p>
-      <div id="entryHolder">
-            <div id="date"></div>
-            <div id="temp"></div>
-            <div id="content"></div>
-          </div>
-    </div> -->
-    <!-- <div id="app">
-      <div class="holder headline">Weather Journal App</div>
-      <div class="holder zip">
-        <label for="zip">Enter Zipcode here</label>
-        <input type="text" id="zip" placeholder="enter zip code here" />
-      </div>
-      <div class="holder feel">
-        <label for="feelings">How are you feeling today?</label>
-        <textarea
-          class="myInput"
-          id="feelings"
-          placeholder="Enter your feelings here"
-          rows="9"
-          cols="50"
-        ></textarea>
-        <button id="generate" type="submit">Generate</button>
-      </div>
-      <div class="holder entry">
-        <div class="title">Most Recent Entry</div>
-        <div id="entryHolder">
-          <div id="date"></div>
-          <div id="temp"></div>
-          <div id="content"></div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <script src="app.js" type="text/javascript"></script> -->
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>

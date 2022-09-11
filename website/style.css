@@ -16,7 +16,7 @@ body {
   height: 100vh;
   padding: 3.2rem;
   color: #333;
-  font-family: BlinkMacSystemFont, sans-serif;
+  font-family: "Oswold", sans-serif;
 }
 
 .app {
@@ -145,6 +145,7 @@ body {
 .btn-get:hover,
 .btn-get:focus {
   background: #fecd67;
+  outline: none;
 }
 
 /* ************************ */
@@ -154,13 +155,16 @@ body {
   background: #f7f7f7;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 20rem 1fr 1fr;
+  grid-template-rows: 1fr 1fr 20rem;
 }
 
 .recents {
   grid-column: 1 / 4;
+}
+
+.recents-holder {
   overflow: scroll;
-  margin-bottom: 2.4rem;
+  height: 80%;
 }
 
 .recent-title {
@@ -176,6 +180,7 @@ body {
   font-size: 1.6rem;
   padding: 1.2rem 0.4rem;
   border-bottom: 1px solid #ddd;
+  transition: all 0.3s;
 }
 
 .field {
@@ -243,26 +248,27 @@ body {
 }
 
 .info-unit,
-.info-unit-km,
+.info-unit-miles,
 .info-unit-speed {
   position: absolute;
+  text-transform: uppercase;
   top: 1rem;
-  right: -2.25rem;
-  font-size: 2rem;
+  right: -2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: rgba(33, 89, 127, 0.5);
 }
 
-.info-unit-km {
+.info-unit-miles {
   top: auto;
-  bottom: 0.75rem;
-  right: -3rem;
+  bottom: 1rem;
+  right: -5rem;
 }
 
 .info-unit-speed {
   top: auto;
-  bottom: 0.75rem;
-  right: -4.65rem;
+  bottom: 1rem;
+  right: -4rem;
 }
 
 .rise-data,
@@ -277,4 +283,28 @@ body {
 }
 .end {
   justify-self: end;
+}
+
+.info.active {
+  background: #21597f;
+  color: #fff;
+}
+
+.active .info-unit,
+.active .info-unit-miles,
+.active .info-unit-speed {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.active .info-icon {
+  background: #fecd67;
+}
+
+.entry.active {
+  background: #21597f;
+  color: #fff;
+}
+
+.active .ent-temp {
+  color: #fecd67;
 }
